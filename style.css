@@ -1,1 +1,15 @@
-/* Add your external styles here. This file is linked in index.html */
+body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+nav { background: #003366; padding: 10px; text-align: center; }
+nav a { color: white; margin: 0 10px; font-weight: bold; text-decoration: none; }
+header { height: 100vh; color: white; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; background: black; }
+header video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.cta-btn { background: white; padding: 10px 20px; color: #003366; text-decoration: none; border-radius: 5px; font-weight: bold; }
+section { padding: 40px 20px; }
+.dest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.dest-card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+.dest-card img { width: 100%; height: 180px; object-fit: cover; }
+.dest-card h4 { padding: 10px; background: #003366; color: white; }
+iframe { width: 100%; height: 300px; border: none; border-radius: 8px; }
+footer { background: #003366; color: white; text-align: center; padding: 20px; }
+.wa-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; }
+.wa-float img { width: 50px; height: 50px; }
