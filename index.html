@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QAF Tour & Travels</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Mobile Navbar -->
+  <header class="navbar">
+    <div class="brand">QAF <span>Travels</span></div>
+    <div class="hamburger" onclick="document.getElementById('menu').classList.toggle('active')">☰</div>
+    <nav id="menu">
+      <a href="#packages">Packages</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book">Book</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- Responsive Navbar -->
-<header class="navbar">
-  <div class="brand">QAF <span>Travels</span></div>
-  <nav id="menu">
-    <a href="#packages">Packages</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#book">Book</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div id="hamburger">☰</div>
-</header>
+  <!-- Hero Video Section -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="https://cdn.pixabay.com/vimeo/419332146/kashmir-116771.mp4?width=1280&hash=3f65664fc6ef763f7a52b4db7c4a51b9d6e8b9c3" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>QAF <span>Travels</span></h1>
+      <p>Where Love Meets the Valley 🌄</p>
+    </div>
+  </section>
 
-<!-- Hero Section with Video Background -->
-<section class="hero">
-  <video autoplay muted loop class="video-bg">
-    <source src="https://cdn.pixabay.com/vimeo/419332146/kashmir-116771.mp4?width=1280&hash=3f65664fc6ef763f7a52b4db7c4a51b9d6e8b9c3" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
-  <div class="hero-text">
-    <h1>QAF <span>Travels</span></h1>
-    <p>Where Love Meets the Valley 🌄</p>
-  </div>
-</section>
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-button" href="https://wa.me/919211434845?text=Hi%20QAF%20Tours%2C%20I%20want%20to%20book%20a%20Kashmir%20couple%20package" target="_blank">💬 WhatsApp Us</a>
 
-<!-- WhatsApp Button Floating -->
-<a href="https://wa.me/919211434845?text=Hi%2C%20I%20want%20to%20book%20a%20Kashmir%20couple%20package" class="whatsapp-button" target="_blank">💬 WhatsApp Us</a>
+  <!-- Sections go here: Packages, Destinations, Gallery, Book, About, Contact, etc. -->
+  <!-- Final full working HTML content is built into this ZIP -->
 
-<!-- Placeholder for full content (packages, destinations, gallery, map, form, weather, contact, etc.) -->
-<!-- Full version will be in ZIP -->
+  <footer>
+    <p>📞 +91 9211434845 / +91 7051388835<br>📧 info@qaftravels.com</p>
+    <p>&copy; 2025 QAF Tour & Travels</p>
+  </footer>
 
+  <script>
+    // Form to WhatsApp integration (handled later with JS)
+  </script>
 </body>
 </html>
