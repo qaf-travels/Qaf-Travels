@@ -1,190 +1,229 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QAF Tour & Travels</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f2f2f2; }
-    header, footer { background: #003366; color: white; text-align: center; padding: 1rem 0; }
-    nav { background: #005599; padding: 1rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; }
-    .hero {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/Kashmir_Panoramic.jpg');
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      text-shadow: 2px 2px 8px #000;
-      animation: slideShow 20s infinite;
-    }
-    @keyframes slideShow {
-      0% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/Kashmir_Panoramic.jpg'); }
-      25% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Gondola_ride_Gulmarg_Kashmir.jpg'); }
-      50% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d0/Dal_Lake_-_panoramio.jpg'); }
-      75% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2b/Pahalgam.jpg'); }
-      100% { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/Kashmir_Panoramic.jpg'); }
-    }
-    .section { padding: 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #003366; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; }
-    .card { background: white; margin: 1rem 0; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
-    footer p { margin: 0.5rem 0; }
-    .gallery img { width: 100%; max-width: 300px; margin: 5px; border-radius: 10px; object-fit: cover; height: 200px; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
-    .contact-info { font-size: 1rem; margin-top: 1rem; }
-    .button { background: #0077cc; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }header {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Dal_Lake_Srinagar.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #01497c;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #0369a1;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.package, .destination, .gallery-img, .review {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.form-section input, .form-section textarea, .form-section select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  background-color: #01497c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #0369a1;
+}
+
   </style>
-</head>
-<body>
-
-<header>
-  <h1>QAF Tour & Travels</h1>
-  <p>Every journey tells a story ✈️</p>
-</header>
-
-<nav>
-  <a href="#home">Home</a>
-  <a href="#packages">Packages</a>
-  <a href="#destinations">Destinations</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#about">About Us</a>
-  <a href="#contact">Contact</a>
-  <a href="#book">Book Now</a>
-</nav>
-
-<div class="hero" id="home">
-  Explore Kashmir Like Never Before 🌄
-</div>
-
-<section class="section" id="packages">
-  <h2>Our Packages</h2>
-  <div class="card">
-    <h3>Basic Couple Package – 3 Nights</h3>
-    <p>Hotel stay, 1 Shikara night, and cab across Srinagar, Gulmarg & Pahalgam.</p>
-  </div>
-  <div class="card">
-    <h3>Premium Couple Package – 3 Nights</h3>
-    <p>Everything in Basic + Candlelight dinner, photo shoot, and guided cab tour.</p>
-  </div>
-  <div class="card">
-    <h3>Luxury Package – 3 Nights</h3>
-    <p>All premium benefits + houseboat stay, full-time cameraman-guide, and decor.</p>
-  </div>
-</section>
-
-<section class="section" id="destinations">
-  <h2>Popular Destinations</h2>
-  <div class="card">
-    <h3>Pahalgam 🌲</h3>
-    <p>Lush meadows, Lidder River, pine forests — great for nature lovers and trekkers.</p>
-  </div>
-  <div class="card">
-    <h3>Gulmarg ❄️</h3>
-    <p>Famous for snow activities, gondola rides, and scenic views for honeymooners.</p>
-  </div>
-  <div class="card">
-    <h3>Srinagar 🛶</h3>
-    <p>Dal Lake, Mughal gardens, houseboats — the heart of QAF experiences.</p>
-  </div>
-</section>
-
-<section class="section" id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Pahalgam.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lidder_River_in_Pahalgam.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Pahalgam_bridge.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Pahalgam_View.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Shepherds_in_Pahalgam.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Gulmarg_gondola_ride.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Gulmarg_Hotel_View.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Gulmarg_Snow_Field.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Gulmarg_Trees.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Gulmarg_from_above.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Dal_Lake_-_panoramio.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Shikara_boat_on_Dal_Lake.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Mughal_Gardens_Kashmir.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Shalimar_Bagh_Srinagar.jpg" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Nishat_Bagh_Gardens.jpg" />
-  </div>
-</section>
-
-<section class="section" id="about">
-  <h2>About Us</h2>
-  <p>QAF Tour & Travels is a trusted travel agency based in Kashmir with a Pan India presence. We specialize in crafting beautiful journeys for couples and families through customized tour packages, houseboat stays, cultural experiences, and more. Every journey with QAF tells a story worth remembering.</p>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p class="contact-info">📞 +91 9211434845<br>
-     📧 info@qaftravels.com<br>
-     📍 Srinagar, Jammu & Kashmir</p>
-  <a href="https://wa.me/919211434845" class="button" target="_blank">Chat on WhatsApp</a>
-</section>
-
-
-<section class="section" id="book">
-  <h2>Book Your Journey</h2>
-  <p>Please fill the details below. Your info will be sent to our team directly via WhatsApp.</p>
-  <form id="bookingForm" onsubmit="sendWhatsApp(); return false;">
-    <label>Full Name:<br><input type="text" id="name" required></label><br><br>
-    <label>Address:<br><input type="text" id="address"></label><br><br>
-    <label>Phone Number:<br><input type="text" id="phone" required></label><br><br>
-    <label>Email:<br><input type="email" id="email"></label><br><br>
-    <label>Number of Travelers:<br><input type="number" id="persons" required></label><br><br>
-    <label>Travel Dates:<br><input type="text" id="dates" placeholder="e.g., 12 July to 16 July" required></label><br><br>
-    <label>Destinations You Want to Visit:<br></label>
-    <label><input type="checkbox" name="places" value="Pahalgam + Betaab Valley"> Pahalgam + Betaab Valley</label><br>
-    <label><input type="checkbox" name="places" value="Gulmarg"> Gulmarg</label><br>
-    <label><input type="checkbox" name="places" value="Sonmarg"> Sonmarg</label><br>
-    <label><input type="checkbox" name="places" value="Dal Lake"> Dal Lake</label><br>
-    <label><input type="checkbox" name="places" value="Doodhpathri"> Doodhpathri</label><br>
-    <label><input type="checkbox" name="places" value="Mughal Gardens"> Mughal Gardens</label><br>
-    <label><input type="checkbox" name="places" value="Yusmarg"> Yusmarg</label><br>
-    <label><input type="checkbox" name="places" value="Aru Valley"> Aru Valley</label><br>
-    <label><input type="checkbox" name="places" value="Sinthan Top"> Sinthan Top</label><br><br>
-    <label>Cab Required?<br>
+</head><body>
+  <header>
+    <h1>QAF Tour & Travels</h1>
+    <p>Every journey tells a story ✈️</p>
+  </header>  <nav>
+    <a href="#home">Home</a>
+    <a href="#packages">Packages</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#book">Book Now</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </nav>  <section id="packages">
+    <h2>Our Packages</h2>
+    <div class="package">
+      <h3>Basic Couple Package – 3 Nights</h3>
+      <p>INR 18,999: Includes hotel stay, 1 Shikara night, and cab across Srinagar, Gulmarg & Pahalgam.</p>
+    </div>
+    <div class="package">
+      <h3>Premium Couple Package – 3 Nights</h3>
+      <p>INR 26,999: Everything in Basic + Candlelight dinner, photo shoot, and guided cab tour.</p>
+    </div>
+    <div class="package">
+      <h3>Luxury Package – 3 Nights</h3>
+      <p>INR 39,999: All premium benefits + houseboat stay, full-time cameraman-guide, and decor.</p>
+    </div>
+  </section>  <section id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination">
+      <h4>Pahalgam 🌲</h4>
+      <p>Lush meadows, Lidder River, pine forests — great for nature lovers and trekkers.</p>
+    </div>
+    <div class="destination">
+      <h4>Gulmarg 🎿</h4>
+      <p>Snow sports, Gulmarg Gondola ride, meadows and valleys.</p>
+    </div>
+    <div class="destination">
+      <h4>Sonmarg 🏔️</h4>
+      <p>Golden meadow, glaciers, river trekking, and lush alpine landscape.</p>
+    </div>
+    <div class="destination">
+      <h4>Dal Lake 🚤</h4>
+      <p>Shikara rides, floating markets, romantic views.</p>
+    </div>
+    <div class="destination">
+      <h4>Doodhpathri 🌼</h4>
+      <p>Untouched lush landscapes with milky streams and scenic beauty.</p>
+    </div>
+    <div class="destination">
+      <h4>Mughal Gardens 🌸</h4>
+      <p>Shalimar, Nishat, Chashme Shahi — royal history and natural beauty combined.</p>
+    </div>
+    <div class="destination">
+      <h4>Aru Valley 🏕️</h4>
+      <p>Camping and horse riding, close to Pahalgam.</p>
+    </div>
+    <div class="destination">
+      <h4>Yusmarg 🌿</h4>
+      <p>Offbeat peaceful trails and pine forests.</p>
+    </div>
+    <div class="destination">
+      <h4>Verinag 💧</h4>
+      <p>Origin of Jhelum River and beautiful gardens.</p>
+    </div>
+    <div class="destination">
+      <h4>Betaab Valley 📸</h4>
+      <p>Iconic cinematic valley near Pahalgam, famous for film shoots.</p>
+    </div>
+  </section>  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Snow_Gulmarg.jpg" alt="Gulmarg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Sonamarg_Valley.jpg" alt="Sonmarg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Pahalgam.jpg" alt="Pahalgam">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Dal_Lake_Srinagar_Sunset.jpg" alt="Dal Lake">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Mughal_Garden_Kashmir.jpg" alt="Mughal Garden">
+    </div>
+  </section>  <section id="book">
+    <h2>Book Your Trip</h2>
+    <form class="form-section" action="https://api.whatsapp.com/send" method="get" target="_blank">
+      <input type="hidden" name="phone" value="+919211434845">
+      <input type="hidden" name="text" id="whatsappText">
+      <label>Name:</label><input type="text" id="name">
+      <label>Address:</label><input type="text" id="address">
+      <label>Phone Number:</label><input type="text" id="phone">
+      <label>Email:</label><input type="email" id="email">
+      <label>Destinations:</label><br>
+      <select multiple id="places">
+        <option value="Pahalgam">Pahalgam</option>
+        <option value="Gulmarg">Gulmarg</option>
+        <option value="Sonmarg">Sonmarg</option>
+        <option value="Dal Lake">Dal Lake</option>
+        <option value="Mughal Gardens">Mughal Gardens</option>
+        <option value="Doodhpathri">Doodhpathri</option>
+        <option value="Aru Valley">Aru Valley</option>
+        <option value="Yusmarg">Yusmarg</option>
+        <option value="Verinag">Verinag</option>
+        <option value="Betaab Valley">Betaab Valley</option>
+      </select>
+      <label>No. of Travellers:</label><input type="number" id="persons">
+      <label>Cab Required:</label>
       <select id="cab">
         <option value="Yes">Yes</option>
         <option value="No">No</option>
       </select>
-    </label><br><br>
-    <button type="submit" class="button">Send on WhatsApp</button>
-  </form>
-</section>
+      <label>Dates:</label><input type="text" placeholder="dd-mm-yyyy to dd-mm-yyyy" id="dates">
+      <button type="submit" onclick="prepareWhatsappMsg()">Submit to WhatsApp</button>
+    </form>
+  </section>  <section id="reviews">
+    <h2>Customer Reviews ⭐</h2>
+    <div class="review">
+      <p>"The trip was well organized and the team was very professional. Highly recommend QAF!" – ⭐⭐⭐⭐⭐</p>
+    </div>
+    <div class="review">
+      <p>"Breathtaking experience, smooth booking, and beautiful places!" – ⭐⭐⭐⭐☆</p>
+    </div>
+  </section>  <section id="about">
+    <h2>About Us</h2>
+    <p>QAF Travels is a Kashmir-based travel agency offering customized travel experiences across Srinagar, Gulmarg, Pahalgam, and other exotic locations. We specialize in couple packages, family holidays, and adventure tours.</p>
+  </section>  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@qaftravels.com</p>
+    <p>Phone: +91 9211434845</p>
+  </section>  <footer style="text-align:center; padding:20px; background-color:#01497c; color:white">
+    <p>© 2025 QAF Tour & Travels | Developed by Skylers</p>
+  </footer>  <script>
+    function prepareWhatsappMsg() {
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const places = [...document.getElementById("places").selectedOptions].map(opt => opt.value).join(", ");
+      const persons = document.getElementById("persons").value;
+      const cab = document.getElementById("cab").value;
+      const dates = document.getElementById("dates").value;
 
-<script>
-  function sendWhatsApp() {
-    const name = document.getElementById("name").value;
-    const address = document.getElementById("address").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const persons = document.getElementById("persons").value;
-    const dates = document.getElementById("dates").value;
-    const cab = document.getElementById("cab").value;
+      const msg = `Booking Enquiry:\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nEmail: ${email}\nDestinations: ${places}\nTravellers: ${persons}\nCab: ${cab}\nDates: ${dates}`;
 
-    const places = Array.from(document.querySelectorAll('input[name="places"]:checked')).map(el => el.value).join(", ");
-
-    const message = `Booking Inquiry:%0A%0AName: ${name}%0AAddress: ${address}%0APhone: ${phone}%0AEmail: ${email}%0ATravelers: ${persons}%0ADates: ${dates}%0ADestinations: ${places}%0ACab Required: ${cab}`;
-
-    const whatsappURL = `https://wa.me/919211434845?text=${message}`;
-    window.open(whatsappURL, "_blank");
-  }
-</script>
-
-  <h2>Book Your Journey</h2>
-  <p>To book a customized Kashmir package or consult with us directly, tap the button below or email us anytime.</p>
-  <a href="mailto:info@qaftravels.com" class="button">Book Now via Email</a>
-</section>
-
-<footer>
-  <p>&copy; 2025 QAF Tour & Travels. All rights reserved.</p>
-  <p>Powered by Skylers</p>
-</footer>
-
-</body>
-</html>
+      document.getElementById("whatsappText").value = encodeURIComponent(msg);
+    }
+  </script></body></html>
