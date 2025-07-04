@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,95 +7,27 @@
   <title>QAF Tour & Travels</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background: #f2f2f2;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    header video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 600;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-    }
-    nav {
-      background-color: #003366;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    section {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .package {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .gallery img {
-      width: 100%;
-      margin-bottom: 15px;
-      border-radius: 10px;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      z-index: 1000;
-    }
-    .whatsapp-float img {
-      width: 60px;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 8px;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f2f2f2; color: #333; line-height: 1.6; }
+    header { position: relative; height: 100vh; overflow: hidden; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    header video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+    header h1 { font-size: 3rem; font-weight: 600; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+    nav { background-color: #003366; display: flex; justify-content: center; padding: 10px; position: sticky; top: 0; z-index: 10; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 30px 20px; max-width: 1000px; margin: auto; }
+    .package, .review { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .gallery { display: flex; overflow-x: auto; gap: 15px; }
+    .gallery img { width: 300px; border-radius: 10px; flex-shrink: 0; }
+    iframe { width: 100%; height: 400px; border: 0; border-radius: 8px; }
+    form input, form textarea, form select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    .whatsapp-float { position: fixed; bottom: 15px; right: 15px; z-index: 1000; }
+    .whatsapp-float img { width: 60px; }
   </style>
 </head>
 <body>
   <header>
     <video autoplay muted loop>
-      <source src="kashmir-bg.mp4" type="video/mp4">
+      <source src="kashmir-bg.mp4" type="video/mp4" />
     </video>
     <h1>QAF Tour & Travels</h1>
     <p>Every journey tells a story ✈️</p>
@@ -104,24 +37,18 @@
     <a href="#packages">Packages</a>
     <a href="#destinations">Destinations</a>
     <a href="#gallery">Gallery</a>
+    <a href="#weather">Weather</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#reels">Reels</a>
     <a href="#map">Map</a>
-    <a href="#contact">Book Now</a>
+    <a href="#form">Book Now</a>
   </nav>
 
   <section id="packages">
     <h2>Our Packages</h2>
-    <div class="package">
-      <h3>Basic Couple Package – 3 Nights</h3>
-      <p>Total: ₹24,125</p>
-    </div>
-    <div class="package">
-      <h3>Premium Package – 3 Nights</h3>
-      <p>Total: ₹35,999</p>
-    </div>
-    <div class="package">
-      <h3>Luxury Package – 3 Nights</h3>
-      <p>Total: ₹51,000</p>
-    </div>
+    <div class="package"><h3>Basic Couple Package – 3 Nights</h3><p>Total: ₹24,125</p></div>
+    <div class="package"><h3>Premium Package – 3 Nights</h3><p>Total: ₹35,999</p></div>
+    <div class="package"><h3>Luxury Package – 3 Nights</h3><p>Total: ₹51,000</p></div>
   </section>
 
   <section id="destinations">
@@ -141,14 +68,30 @@
   </section>
 
   <section id="gallery">
-    <h2>Gallery</h2>
+    <h2>Gallery (Swipe)</h2>
     <div class="gallery">
-      <img src="img/pahalgam1.jpg" alt="Pahalgam">
-      <img src="img/gulmarg1.jpg" alt="Gulmarg">
-      <img src="img/sonmarg1.jpg" alt="Sonmarg">
-      <img src="img/dal1.jpg" alt="Dal Lake">
-      <img src="img/mughal1.jpg" alt="Mughal Gardens">
+      <img src="img/pahalgam1.jpg" alt="Pahalgam" />
+      <img src="img/gulmarg1.jpg" alt="Gulmarg" />
+      <img src="img/sonmarg1.jpg" alt="Sonmarg" />
+      <img src="img/dal1.jpg" alt="Dal Lake" />
+      <img src="img/mughal1.jpg" alt="Mughal Gardens" />
     </div>
+  </section>
+
+  <section id="weather">
+    <h2>Live Weather (Srinagar)</h2>
+    <iframe src="https://weather.com/weather/today/l/34.08,74.79?par=google" loading="lazy"></iframe>
+  </section>
+
+  <section id="reels">
+    <h2>Kashmir Reels</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfYQvVfR6bo" title="Kashmir travel reel" allowfullscreen></iframe>
+  </section>
+
+  <section id="reviews">
+    <h2>Customer Reviews ⭐</h2>
+    <div class="review"><strong>Aliya Khan</strong><br/>"Best experience ever! Highly recommended." ⭐⭐⭐⭐⭐</div>
+    <div class="review"><strong>Rohit Sharma</strong><br/>"Perfect arrangement and caring team!" ⭐⭐⭐⭐⭐</div>
   </section>
 
   <section id="map">
@@ -156,9 +99,25 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51905.1435799282!2d74.77304564398714!3d34.08367083725098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1855df9d87eab%3A0x3cfed8d3fc1f0e9e!2sSrinagar%2C%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1651061369893!5m2!1sen!2sin"></iframe>
   </section>
 
-  <section id="contact">
+  <section id="form">
     <h2>Book Your Trip</h2>
-    <p><a href="https://wa.me/919211434845" target="_blank">Click here to chat on WhatsApp 📲</a></p>
+    <form action="https://wa.me/919211434845" method="get" target="_blank">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="address" placeholder="Your Address" />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <label>Destinations to Visit:</label>
+      <select name="destinations" multiple>
+        <option>Pahalgam</option><option>Gulmarg</option><option>Sonmarg</option><option>Dal Lake</option>
+        <option>Mughal Gardens</option><option>Doodhpathri</option><option>Yusmarg</option><option>Aru Valley</option>
+        <option>Betaab Valley</option><option>Verinag</option>
+      </select>
+      <label>Cab Required?</label>
+      <select name="cab"><option>Yes</option><option>No</option></select>
+      <input type="text" name="persons" placeholder="No. of Persons" />
+      <input type="text" name="nights" placeholder="Total Nights (e.g. 4 Nights)" />
+      <button type="submit">Send via WhatsApp</button>
+    </form>
   </section>
 
   <div class="whatsapp-float">
