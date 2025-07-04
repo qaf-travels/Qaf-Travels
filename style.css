@@ -1,138 +1,63 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f0f0f0;
+  margin: 0; font-family: 'Poppins', sans-serif; background: #f7f7f7;
 }
 .hero {
-  background: url('https://source.unsplash.com/1600x600/?travel,kashmir') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 4em 1em;
-  position: relative;
+  position: relative; height: 100vh; text-align: center; color: white;
+}
+.bg-video {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
 }
 .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); z-index: 1;
 }
-.hero h1, .hero p, .hero nav {
-  position: relative;
-  z-index: 2;
+.hero-content {
+  position: relative; z-index: 2; top: 40%; transform: translateY(-50%);
 }
 .animated-logo {
-  font-size: 3em;
-  font-weight: bold;
-  animation: fadeUp 1.2s ease-out;
+  font-size: 3em; animation: fadeUp 1s ease-out;
 }
-.animated-logo span {
-  color: #f3c623;
+.animated-logo span { color: #f3c623; }
+nav {
+  position: sticky; top: 0; background: #1b4d3e; padding: 1em; z-index: 999;
+  display: flex; justify-content: center; gap: 1.2em;
+}
+nav a { color: white; text-decoration: none; font-weight: bold; }
+
+main { padding: 2em; max-width: 1100px; margin: auto; }
+h2 { color: #1b4d3e; margin-top: 1.5em; }
+.package-grid, .destination-grid, .gallery-grid {
+  display: flex; flex-wrap: wrap; gap: 1.5em; justify-content: center;
+}
+.package-card, .destination-card {
+  background: white; padding: 1em; border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 280px;
+}
+.destination-card img, .gallery-grid img {
+  width: 100%; height: 200px; object-fit: cover; border-radius: 8px;
+}
+.booking-form {
+  display: flex; flex-direction: column; gap: 1em; max-width: 500px; margin: auto;
+}
+.booking-form input, .booking-form textarea, .booking-form select {
+  padding: 0.8em; border: 1px solid #ccc; border-radius: 6px;
+}
+.booking-form button {
+  background: #1b4d3e; color: white; border: none; padding: 1em; border-radius: 6px; cursor: pointer;
+}
+.testimonial {
+  background: white; margin: 1em auto; padding: 1em; border-left: 4px solid #f3c623;
+  max-width: 700px; font-style: italic;
+}
+.whatsapp-float {
+  position: fixed; bottom: 20px; right: 20px;
+  background: #25D366; color: white; padding: 10px 16px;
+  border-radius: 30px; text-decoration: none; font-weight: bold;
+}
+footer {
+  background: #1b4d3e; color: white; text-align: center; padding: 1.5em;
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 1em;
-  position: sticky;
-  top: 0;
-  background: rgba(27, 77, 62, 0.95);
-  padding: 1em 0;
-  z-index: 10;
-}
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-.package-grid, .destination-grid, .gallery-grid {
-  display: flex;
-  gap: 1.5em;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2em 0;
-}
-.package-card, .destination-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 280px;
-}
-.package-card h3, .destination-card h3 {
-  color: #1b4d3e;
-}
-.destination-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  max-width: 500px;
-  margin: auto;
-}
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  padding: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-.booking-form button {
-  background: #1b4d3e;
-  color: white;
-  border: none;
-  padding: 1em;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.booking-form button:hover {
-  background: #16513b;
-}
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.scroll-top {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: #1b4d3e;
-  color: white;
-  padding: 0.6em 1em;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  z-index: 1000;
-}
-footer {
-  text-align: center;
-  padding: 1.5em;
-  background: #222;
-  color: white;
-}
-.social-icons a {
-  margin: 0 10px;
-  color: white;
-  font-size: 1.4em;
-  text-decoration: none;
 }

@@ -5,112 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QAF Tour & Travels</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
+
+<header class="hero">
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.pixabay.com/vimeo/419332146/kashmir-116771.mp4?width=1280&hash=3f65664fc6ef763f7a52b4db7c4a51b9d6e8b9c3" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
     <h1 class="animated-logo">QAF <span>Travels</span></h1>
-    <p>Every journey tells a story ✈️</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#packages">Packages</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="#book">Book Now</a>
-      <a href="#about">About Us</a>
-    </nav>
-  </header>
+    <p>Where Love Meets the Valley 🌄</p>
+  </div>
+  <nav>
+    <a href="#packages">Packages</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#book">Book</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="packages">
-      <h2>Popular Packages</h2>
-      <div class="package-grid">
-        <div class="package-card">
-          <h3>🌄 Kashmir Getaway</h3>
-          <p>Duration: 4 Nights / 5 Days</p>
-          <p>Price: ₹2,999 per night (per couple)</p>
-          <ul>
-            <li>Deluxe Hotels</li>
-            <li>Breakfast + Dinner</li>
-            <li>Private Cab + Driver</li>
-            <li>1 Night Shikara Ride on Dal Lake</li>
-          </ul>
-        </div>
-        <div class="package-card">
-          <h3>🏔️ Himachal Explorer</h3>
-          <p>Duration: 5 Nights / 6 Days</p>
-          <p>Price: ₹3,499 per night</p>
-          <ul>
-            <li>Hotel + Meals</li>
-            <li>Cab Sightseeing</li>
-            <li>Manali, Shimla, Kufri</li>
-            <li>Personal Travel Guide</li>
-          </ul>
-        </div>
-        <div class="package-card">
-          <h3>🏰 Golden Triangle Tour</h3>
-          <p>3 Nights / 4 Days</p>
-          <p>₹2,499 per night (Delhi–Agra–Jaipur)</p>
-          <ul>
-            <li>AC Hotels + Breakfast</li>
-            <li>Historical Tours</li>
-            <li>Cab + Driver</li>
-          </ul>
-        </div>
+<main>
+  <section id="packages"><h2>Kashmir Couple Packages</h2>
+    <div class="package-grid">
+      <div class="package-card">
+        <h3>Basic – ₹23,999</h3>
+        <ul>
+          <li>3N: Pahalgam, Srinagar, Gulmarg</li>
+          <li>1N Shikara stay, 2N hotel</li>
+          <li>Breakfast + Dinner</li>
+          <li>Mughal Gardens + Cab</li>
+          <li>Free photoshoot</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="destinations">
-      <h2>Top Destinations</h2>
-      <div class="destination-grid">
-        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?srinagar" alt="Srinagar"/><h3>Srinagar</h3></div>
-        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?manali" alt="Manali"/><h3>Manali</h3></div>
-        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?jaipur" alt="Jaipur"/><h3>Jaipur</h3></div>
+      <div class="package-card">
+        <h3>Premium – ₹32,999</h3>
+        <ul>
+          <li>Includes Basic +</li>
+          <li>Candlelight Dinner</li>
+          <li>Room Decor + Guided Shoot</li>
+          <li>Personal Tour Manager</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://source.unsplash.com/300x200/?kashmir" alt="Kashmir" />
-        <img src="https://source.unsplash.com/300x200/?travel" alt="Travel" />
-        <img src="https://source.unsplash.com/300x200/?mountains" alt="Mountains" />
+      <div class="package-card">
+        <h3>Luxury – ₹44,999</h3>
+        <ul>
+          <li>Includes Premium +</li>
+          <li>Luxury Houseboat</li>
+          <li>Full Video Shoot</li>
+          <li>Vlog/Reel Creation</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="book">
-      <h2>Book Your Trip</h2>
-      <form class="booking-form">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <label for="package">Select Package:</label>
-        <select name="package" id="package" required>
-          <option value="">-- Choose Package --</option>
-          <option value="Kashmir">Kashmir Getaway – ₹2,999/night</option>
-          <option value="Himachal">Himachal Explorer – ₹3,499/night</option>
-          <option value="Golden">Golden Triangle – ₹2,499/night</option>
-        </select>
-        <label for="dates">Travel Dates:</label>
-        <input type="date" name="start" required />
-        <input type="date" name="end" required />
-        <textarea name="message" placeholder="Any special requests?"></textarea>
-        <button type="submit">Book Now</button>
-      </form>
-    </section>
-  </main>
-
-  <a href="https://wa.me/919876543210?text=Hi%20QAF%20Travels!" class="whatsapp-float" target="_blank">💬 Book on WhatsApp</a>
-  <div class="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</div>
-
-  <footer>
-    <p>&copy; 2025 QAF Tour & Travels. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://instagram.com/" target="_blank">📸</a>
-      <a href="https://facebook.com/" target="_blank">📘</a>
-      <a href="https://youtube.com/" target="_blank">▶️</a>
     </div>
-  </footer>
+  </section>
+
+  <section id="destinations"><h2>Top Kashmir Destinations</h2>
+    <div class="destination-grid">
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?srinagar" alt="Srinagar"/><h3>Srinagar</h3></div>
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?gulmarg" alt="Gulmarg"/><h3>Gulmarg</h3></div>
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?pahalgam" alt="Pahalgam"/><h3>Pahalgam</h3></div>
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?sonmarg" alt="Sonmarg"/><h3>Sonmarg</h3></div>
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?doodhpathri" alt="Doodhpathri"/><h3>Doodhpathri</h3></div>
+      <div class="destination-card"><img src="https://source.unsplash.com/300x200/?yusmarg" alt="Yusmarg"/><h3>Yusmarg</h3></div>
+    </div>
+  </section>
+
+  <section id="gallery"><h2>Kashmir Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/300x200/?dal-lake" alt="Dal Lake" />
+      <img src="https://source.unsplash.com/300x200/?shikara" alt="Shikara" />
+      <img src="https://source.unsplash.com/300x200/?kashmir-couple" alt="Couple" />
+    </div>
+  </section>
+
+  <section id="book"><h2>Book Your Trip</h2>
+    <form class="booking-form">
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email" required>
+      <select required>
+        <option>Select Package</option>
+        <option>Basic – ₹23,999</option>
+        <option>Premium – ₹32,999</option>
+        <option>Luxury – ₹44,999</option>
+      </select>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <section id="about"><h2>About Us</h2>
+    <p>QAF Tour & Travels is a Kashmir-based brand offering deeply personalized experiences for couples.
+       From shikara nights to cinematic travel reels, we ensure your story is told with elegance and love.</p>
+  </section>
+
+  <section id="contact"><h2>Contact & Weather</h2>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/34d09n74d79/srinagar/" data-label_1="Srinagar" data-theme="pure">Weather</a>
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+    <iframe src="https://www.google.com/maps?q=dal+lake+kashmir&output=embed" width="100%" height="300" style="border:0;"></iframe>
+  </section>
+
+  <section id="testimonials"><h2>What Couples Say</h2>
+    <div class="testimonial">“QAF made our honeymoon magical — shikara, snow & surprises!” – Zoya & Rahil</div>
+    <div class="testimonial">“Best tour ever. Loved the candlelight dinner and reels!” – Danish & Fatima</div>
+  </section>
+</main>
+
+<a href="https://wa.me/919876543210?text=Hi%20QAF%20Tours%2C%20I%20want%20to%20book%20a%20Kashmir%20couple%20trip!" class="whatsapp-float" target="_blank">💬 WhatsApp Us</a>
+
+<footer><p>&copy; 2025 QAF Tour & Travels</p></footer>
+
 </body>
 </html>
