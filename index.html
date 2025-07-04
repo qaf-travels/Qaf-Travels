@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QAF Tour & Travels</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
-    <h1>QAF Tour & Travels</h1>
+    <div class="overlay"></div>
+    <h1 class="animated-logo">QAF <span>Travels</span></h1>
     <p>Every journey tells a story ✈️</p>
-    <div class="hero-background"></div>
     <nav>
       <a href="#home">Home</a>
       <a href="#packages">Packages</a>
@@ -21,16 +21,96 @@
       <a href="#about">About Us</a>
     </nav>
   </header>
+
   <main>
-    <section id="packages"><h2>Packages</h2><p>Details coming soon...</p></section>
-    <section id="destinations"><h2>Destinations</h2><p>Details coming soon...</p></section>
-    <section id="gallery"><h2>Gallery</h2><p>Images loading...</p></section>
-    <section id="contact"><h2>Contact</h2><p>Contact form will be here</p></section>
-    <section id="book"><h2>Book Now</h2><p>Booking form will be here</p></section>
-    <section id="about"><h2>About Us</h2><p>Details coming soon...</p></section>
+    <section id="packages">
+      <h2>Popular Packages</h2>
+      <div class="package-grid">
+        <div class="package-card">
+          <h3>🌄 Kashmir Getaway</h3>
+          <p>Duration: 4 Nights / 5 Days</p>
+          <p>Price: ₹2,999 per night (per couple)</p>
+          <ul>
+            <li>Deluxe Hotels</li>
+            <li>Breakfast + Dinner</li>
+            <li>Private Cab + Driver</li>
+            <li>1 Night Shikara Ride on Dal Lake</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>🏔️ Himachal Explorer</h3>
+          <p>Duration: 5 Nights / 6 Days</p>
+          <p>Price: ₹3,499 per night</p>
+          <ul>
+            <li>Hotel + Meals</li>
+            <li>Cab Sightseeing</li>
+            <li>Manali, Shimla, Kufri</li>
+            <li>Personal Travel Guide</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <h3>🏰 Golden Triangle Tour</h3>
+          <p>3 Nights / 4 Days</p>
+          <p>₹2,499 per night (Delhi–Agra–Jaipur)</p>
+          <ul>
+            <li>AC Hotels + Breakfast</li>
+            <li>Historical Tours</li>
+            <li>Cab + Driver</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <h2>Top Destinations</h2>
+      <div class="destination-grid">
+        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?srinagar" alt="Srinagar"/><h3>Srinagar</h3></div>
+        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?manali" alt="Manali"/><h3>Manali</h3></div>
+        <div class="destination-card"><img src="https://source.unsplash.com/300x200/?jaipur" alt="Jaipur"/><h3>Jaipur</h3></div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://source.unsplash.com/300x200/?kashmir" alt="Kashmir" />
+        <img src="https://source.unsplash.com/300x200/?travel" alt="Travel" />
+        <img src="https://source.unsplash.com/300x200/?mountains" alt="Mountains" />
+      </div>
+    </section>
+
+    <section id="book">
+      <h2>Book Your Trip</h2>
+      <form class="booking-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <label for="package">Select Package:</label>
+        <select name="package" id="package" required>
+          <option value="">-- Choose Package --</option>
+          <option value="Kashmir">Kashmir Getaway – ₹2,999/night</option>
+          <option value="Himachal">Himachal Explorer – ₹3,499/night</option>
+          <option value="Golden">Golden Triangle – ₹2,499/night</option>
+        </select>
+        <label for="dates">Travel Dates:</label>
+        <input type="date" name="start" required />
+        <input type="date" name="end" required />
+        <textarea name="message" placeholder="Any special requests?"></textarea>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
   </main>
+
+  <a href="https://wa.me/919876543210?text=Hi%20QAF%20Travels!" class="whatsapp-float" target="_blank">💬 Book on WhatsApp</a>
+  <div class="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</div>
+
   <footer>
-    <p>&copy; 2025 Skylers</p>
+    <p>&copy; 2025 QAF Tour & Travels. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/" target="_blank">📸</a>
+      <a href="https://facebook.com/" target="_blank">📘</a>
+      <a href="https://youtube.com/" target="_blank">▶️</a>
+    </div>
   </footer>
 </body>
 </html>
