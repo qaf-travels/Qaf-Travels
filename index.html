@@ -4,186 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QAF Tour & Travels</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
+    * {
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
     }
     header {
       position: relative;
-      text-align: center;
+      height: 100vh;
+      overflow: hidden;
       color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    header::before {
-      content: "";
-      background: url('https://images.unsplash.com/photo-1597519329143-e136486b979b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    header video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.6;
+      object-fit: cover;
       z-index: -1;
     }
     header h1 {
-      padding: 3rem 1rem 0 1rem;
       font-size: 3rem;
-      font-weight: bold;
+      font-weight: 600;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
     nav {
-      background-color: #004080;
+      background-color: #003366;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     nav a {
-      padding: 1rem;
       color: white;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
-    nav a:hover {
-      background-color: #0059b3;
-    }
     section {
-      padding: 2rem;
-      max-width: 1200px;
+      padding: 30px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     .package {
       background: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .gallery img {
+      width: 100%;
+      margin-bottom: 15px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .package h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-    .carousel img {
-      width: 250px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    footer {
-      text-align: center;
-      background: #004080;
-      color: white;
-      padding: 1rem;
-      margin-top: 2rem;
     }
     .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
+      bottom: 15px;
+      right: 15px;
+      z-index: 1000;
     }
     .whatsapp-float img {
-      width: 50px;
+      width: 60px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
   <header>
+    <video autoplay muted loop>
+      <source src="kashmir-bg.mp4" type="video/mp4">
+    </video>
     <h1>QAF Tour & Travels</h1>
     <p>Every journey tells a story ✈️</p>
   </header>
+
   <nav>
     <a href="#packages">Packages</a>
     <a href="#destinations">Destinations</a>
     <a href="#gallery">Gallery</a>
-    <a href="#book">Book Now</a>
-    <a href="#about">About Us</a>
+    <a href="#map">Map</a>
+    <a href="#contact">Book Now</a>
   </nav>
+
   <section id="packages">
     <h2>Our Packages</h2>
     <div class="package">
       <h3>Basic Couple Package – 3 Nights</h3>
-      <p>Includes:</p>
-      <ul>
-        <li>🏨 Hotel Stay: ₹2600 × 3 nights = ₹7,800</li>
-        <li>🚖 Cab Service: ₹2500 × 3 days = ₹7,500</li>
-        <li>🛶 1 Shikara Night = ₹4000</li>
-      </ul>
-      <p><strong>Total: ₹19,300</strong> + 25% profit = <strong>₹24,125</strong></p>
+      <p>Total: ₹24,125</p>
     </div>
     <div class="package">
-      <h3>Premium Couple Package – 3 Nights</h3>
-      <p>Includes everything in Basic +</p>
-      <ul>
-        <li>🍽️ Candlelight Dinner</li>
-        <li>📸 Photoshoot in Mughal Garden</li>
-        <li>👨‍💼 Guide + Cab Service</li>
-      </ul>
-      <p><strong>Total: ₹28,500</strong> (25% profit included)</p>
+      <h3>Premium Package – 3 Nights</h3>
+      <p>Total: ₹35,999</p>
     </div>
     <div class="package">
-      <h3>Luxury Couple Package – 3 Nights</h3>
-      <p>All Premium benefits +</p>
-      <ul>
-        <li>🏠 Houseboat Stay</li>
-        <li>📷 Dedicated Cameraman + Guide</li>
-        <li>🌹 Customized Decor & Service</li>
-      </ul>
-      <p><strong>Total: ₹38,500</strong> (Inclusive of added services & 25% profit)</p>
+      <h3>Luxury Package – 3 Nights</h3>
+      <p>Total: ₹51,000</p>
     </div>
   </section>
+
   <section id="destinations">
     <h2>Top Kashmir Destinations</h2>
-    <div class="package">
-      <h3>🌲 Pahalgam</h3>
-      <p>Lush valleys, Betaab Valley, Aru Valley, river treks, & adventure activities.</p>
-      <div class="carousel">
-        <img src="https://source.unsplash.com/featured/?pahalgam" />
-        <img src="https://source.unsplash.com/featured/?betaabvalley" />
-        <img src="https://source.unsplash.com/featured/?arukashmir" />
-        <img src="https://source.unsplash.com/featured/?pahalgam,river" />
-        <img src="https://source.unsplash.com/featured/?kashmir,forest" />
-      </div>
-    </div>
+    <ul>
+      <li><b>Pahalgam:</b> Scenic meadows, Lidder river, pine forests.</li>
+      <li><b>Gulmarg:</b> Ski slopes, gondola ride, snow activities.</li>
+      <li><b>Sonmarg:</b> Glaciers, treks, river rafting.</li>
+      <li><b>Dal Lake:</b> Shikara rides, floating markets.</li>
+      <li><b>Mughal Gardens:</b> Historic gardens, Mughal architecture.</li>
+      <li><b>Doodhpathri:</b> Meadows and pine woods.</li>
+      <li><b>Yusmarg:</b> Quiet hills and horse riding.</li>
+      <li><b>Betaab Valley:</b> Part of Pahalgam – shooting point.</li>
+      <li><b>Aru Valley:</b> A gateway to treks and camping.</li>
+      <li><b>Verinag:</b> Source of Jhelum river.</li>
+    </ul>
   </section>
+
   <section id="gallery">
     <h2>Gallery</h2>
-    <div class="carousel">
-      <img src="https://source.unsplash.com/featured/?kashmir" />
-      <img src="https://source.unsplash.com/featured/?dal-lake" />
-      <img src="https://source.unsplash.com/featured/?snow,gulmarg" />
-      <img src="https://source.unsplash.com/featured/?mughalgarden" />
-      <img src="https://source.unsplash.com/featured/?kashmir,travel" />
+    <div class="gallery">
+      <img src="img/pahalgam1.jpg" alt="Pahalgam">
+      <img src="img/gulmarg1.jpg" alt="Gulmarg">
+      <img src="img/sonmarg1.jpg" alt="Sonmarg">
+      <img src="img/dal1.jpg" alt="Dal Lake">
+      <img src="img/mughal1.jpg" alt="Mughal Gardens">
     </div>
   </section>
-  <section id="book">
-    <h2>Book Now</h2>
-    <p>To book your custom Kashmir package, message us directly on WhatsApp 📱:</p>
-    <a href="https://wa.me/919211434845" target="_blank">Click to Chat on WhatsApp</a>
+
+  <section id="map">
+    <h2>Explore Kashmir Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51905.1435799282!2d74.77304564398714!3d34.08367083725098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1855df9d87eab%3A0x3cfed8d3fc1f0e9e!2sSrinagar%2C%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1651061369893!5m2!1sen!2sin"></iframe>
   </section>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>QAF Tour & Travels offers carefully curated travel experiences across Kashmir and India. From couples’ getaways to family vacations, we provide hotel bookings, cab services, sightseeing, and unique photo moments — all under one roof.</p>
-    <p>📧 info@qaftravels.com<br>📞 +91 9211434845</p>
+
+  <section id="contact">
+    <h2>Book Your Trip</h2>
+    <p><a href="https://wa.me/919211434845" target="_blank">Click here to chat on WhatsApp 📲</a></p>
   </section>
-  <a href="https://wa.me/919211434845" class="whatsapp-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="Chat on WhatsApp" />
-  </a>
-  <footer>
-    <p>© 2025 Skylers</p>
-  </footer>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919211434845" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp" />
+    </a>
+  </div>
 </body>
 </html>
