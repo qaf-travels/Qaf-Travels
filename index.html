@@ -10,28 +10,35 @@
   <style>
     body { font-family: 'Poppins', sans-serif; margin: 0; }
     .hero {
-      background: url('https://source.unsplash.com/1600x800/?kashmir,travel') center/cover no-repeat;
+      background: url('https://source.unsplash.com/1600x900/?kashmir,mountains') center/cover no-repeat;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
     }
-    footer {
-      background: #111;
-      color: #aaa;
-      padding: 40px 0;
-      text-align: center;
+    .hero h1 { font-size: 3rem; }
+    .features i { font-size: 2rem; color: #007bff; }
+    .card-img-top { height: 200px; object-fit: cover; }
+    footer { background: #111; color: #aaa; padding: 40px 0; text-align: center; }
+    .footer-links a { color: #aaa; margin: 0 10px; text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
     }
-    .footer-links a {
-      color: #aaa;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .footer-links a:hover {
+    .whatsapp-float a {
+      display: inline-block;
+      background: #25d366;
       color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      font-size: 20px;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -40,9 +47,66 @@
   <!-- Hero Section -->
   <section class="hero">
     <div>
-      <h1 class="display-5">Explore Kashmir with QAF</h1>
+      <h1>Explore Kashmir with QAF</h1>
       <p class="lead">Romantic, Family & Group Tours Starting from ₹12,000</p>
-      <a href="#" class="btn btn-light">Book Now</a>
+      <a href="#enquiry" class="btn btn-light mt-3">Plan My Trip</a>
+    </div>
+  </section>
+
+  <!-- Why Choose QAF -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4">Why Travel with QAF?</h2>
+      <div class="row g-4 features">
+        <div class="col-md-3"><i class="bi bi-car-front-fill"></i><p>Private Cab & Guide</p></div>
+        <div class="col-md-3"><i class="bi bi-camera-fill"></i><p>Photoshoot at Gardens</p></div>
+        <div class="col-md-3"><i class="bi bi-heart-fill"></i><p>Candlelight Dinner & Decor</p></div>
+        <div class="col-md-3"><i class="bi bi-telephone-fill"></i><p>24/7 WhatsApp Support</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Destinations -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4">Top Kashmir Destinations</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?gulmarg,kashmir" class="card-img-top" alt="Gulmarg">
+            <div class="card-body"><h5 class="card-title">Gulmarg</h5><p>Snow activities and the world’s highest gondola.</p></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?dal-lake,shikara" class="card-img-top" alt="Dal Lake">
+            <div class="card-body"><h5 class="card-title">Dal Lake</h5><p>Romantic Shikara rides and floating markets.</p></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://source.unsplash.com/800x600/?pahalgam,kashmir" class="card-img-top" alt="Pahalgam">
+            <div class="card-body"><h5 class="card-title">Pahalgam</h5><p>Scenic valleys and lush meadows.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section id="enquiry" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Plan Your Trip</h2>
+      <form action="https://wa.me/919211434845" method="get" target="_blank" onsubmit="return sendToWhatsApp(event)">
+        <div class="row g-3">
+          <div class="col-md-6"><input type="text" id="name" class="form-control" placeholder="Your Name" required></div>
+          <div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Your Phone Number" required></div>
+          <div class="col-md-6"><input type="text" id="destination" class="form-control" placeholder="Destination" required></div>
+          <div class="col-md-6"><input type="number" id="pax" class="form-control" placeholder="No. of People" required></div>
+          <div class="col-md-12"><input type="date" id="date" class="form-control" required></div>
+        </div>
+        <div class="text-center mt-4"><button type="submit" class="btn btn-success">Send Request on WhatsApp</button></div>
+      </form>
     </div>
   </section>
 
@@ -56,6 +120,25 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919211434845" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+  <script>
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const destination = document.getElementById('destination').value;
+      const pax = document.getElementById('pax').value;
+      const date = document.getElementById('date').value;
+      const message = `Hello QAF, I'd like to plan a trip!\nName: ${name}\nPhone: ${phone}\nDestination: ${destination}\nPax: ${pax}\nDate: ${date}`;
+      const url = `https://wa.me/919211434845?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
